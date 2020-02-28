@@ -11,7 +11,9 @@ const Balance = () => {
   return (
     <>
       <h4>Your balance</h4>
-      <h1 id="balance">{balance.toFixed(2)}$</h1>
+      <h1 id="balance" className={balance < 0 ? "money minus" : "money plus"}>
+        {balance.toFixed(2)}$
+      </h1>
     </>
   );
 };

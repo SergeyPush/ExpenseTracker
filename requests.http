@@ -1,0 +1,18 @@
+@host = http://localhost
+@port = 4000
+@api = api/v1
+
+
+GET {{host}}:{{port}}/{{api}}/transactions
+###
+
+POST  {{host}}:{{port}}/{{api}}/transactions
+Content-Type: application/json
+
+{
+    "text":"Loan",
+    "amount":-300
+}
+
+###
+DELETE {{host}}:{{port}}/{{api}}/transactions/5e5951f31ae8a6ef54405b0a
